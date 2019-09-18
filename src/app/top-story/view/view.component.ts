@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TopStoryService } from '../top-story.service';
 
 @Component({
   selector: 'app-view',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopStoryViewComponent implements OnInit {
 
-  constructor() { }
+  topStories: any[];
+
+  constructor(public service: TopStoryService) { }
 
   ngOnInit() {
+    console.log('Hello');
+    this.service.getTopStory('sport').subscribe(
+      res => {
+        this.topStories = res;
+        console.log(res);
+      }
+    )
   }
 
 }

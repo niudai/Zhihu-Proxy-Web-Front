@@ -4,7 +4,7 @@ import { TopStoryViewComponent } from './view/view.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: TopStoryViewComponent
   }
 ];
