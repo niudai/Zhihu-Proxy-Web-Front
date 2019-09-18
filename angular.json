@@ -64,7 +64,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Zhihu-Proxy-Web-Front:build"
+            "browserTarget": "Zhihu-Proxy-Web-Front:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
