@@ -4,6 +4,7 @@ a.nav-btn {
   padding: 5px;
   margin: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 a.nav-btn.active::after {

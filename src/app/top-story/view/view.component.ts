@@ -16,7 +16,7 @@ export interface NavBtnInfo {
 export class TopStoryViewComponent implements OnInit {
   isLoading: boolean;
   navBtnInfos: NavBtnInfo[] = [
-    { routerLink: null, name: '热榜', isActive: true},
+    { routerLink: null, name: '全站', isActive: true},
     { routerLink: 'sport', name: '运动', isActive: false},
     { routerLink: 'science', name: '科学', isActive: false},
     { routerLink: 'fashion', name: '时尚', isActive: false},
