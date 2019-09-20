@@ -14,7 +14,7 @@ export interface NavBtnInfo {
   styleUrls: ['./view.component.css']
 })
 export class TopStoryViewComponent implements OnInit {
-
+  isLoading: boolean;
   navBtnInfos: NavBtnInfo[] = [
     { routerLink: null, name: '热榜', isActive: true},
     { routerLink: 'sport', name: '运动', isActive: false},
@@ -31,6 +31,7 @@ export class TopStoryViewComponent implements OnInit {
   constructor(public service: TopStoryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.isLoading = false;
     this.route.data.subscribe((data: { stories: any}) => {
       this.topStories = data.stories;
     });
@@ -42,5 +43,12 @@ export class TopStoryViewComponent implements OnInit {
     this.activatedNavBtn.isActive = false;
     btn.isActive = true;
     this.activatedNavBtn = btn;
+    this.isLoading = true;
+    this.service.getTopStory(btn.routerLink).subscribe(
+      res => {
+        this.topStories = res;
+        this.isLoading = false;
+      }
+    );
   }
 }

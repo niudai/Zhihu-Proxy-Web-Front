@@ -5,6 +5,7 @@ import { TopStoryRoutingModule } from './top-story-routing.module';
 import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatLibModule } from '../mat-lib/mat-lib.module';
 
 
 @NgModule({
@@ -12,9 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     CommonModule,
     TopStoryRoutingModule,
-    MatButtonModule,
-    MatCardModule,
-    MatToolbarModule
+    MatLibModule
   ]
 })
 export class TopStoryModule { }

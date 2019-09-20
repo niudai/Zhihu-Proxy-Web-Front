@@ -15,3 +15,12 @@ a.nav-btn.active::after {
   background: #0084ff;
   content: "";
 }
+
+mat-spinner.loading-spinner.mat-spinner.mat-progress-spinner.mat-accent.mat-progress-spinner-indeterminate-animation {
+  position: fixed;
+  z-index: 100;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  /* transform-origin: left; */
+}

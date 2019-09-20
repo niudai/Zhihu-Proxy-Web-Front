@@ -2,12 +2,12 @@
   <a
     [class.active]="info.isActive"
     *ngFor="let info of navBtnInfos"
-    routerLink="info.routerLink"
     class="nav-btn"
     (click)="navBtnToggle(info)"
     >{{ info.name }}</a
   >
 </mat-toolbar>
+<mat-spinner *ngIf="isLoading" class = "loading-spinner" color = "accent"></mat-spinner>
 <mat-card class="story-card" *ngFor="let story of topStories">
   <mat-card-header>
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
