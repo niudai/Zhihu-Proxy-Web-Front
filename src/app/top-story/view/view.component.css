@@ -1,0 +1,17 @@
+a.nav-btn {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+}
+
+a.nav-btn.active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: #0084ff;
+  content: "";
+}
