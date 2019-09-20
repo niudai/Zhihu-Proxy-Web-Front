@@ -3,14 +3,14 @@ import { Routes, RouterModule, Resolve, ActivatedRouteSnapshot, RouterStateSnaps
 import { Observable, of, EMPTY, interval } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
 import { QuestionService } from './question.service';
-import { ViewComponent } from './view/view.component';
+import { QuestionViewComponent } from './view/view.component';
 
 @Injectable({ providedIn: 'root'})
 export class QuestionResolverService implements Resolve<any> {
   constructor(private service: QuestionService, private router: Router) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    const questionId = +route.paramMap.get('storyType');
+    const questionId = +route.paramMap.get('questionId');
 
     return this.service.getAnswers(questionId).pipe(
       take(1),
@@ -29,7 +29,7 @@ export class QuestionResolverService implements Resolve<any> {
 const routes: Routes = [
   {
     path: ':questionId',
-    component: ViewComponent,
+    component: QuestionViewComponent,
     resolve: {
       answers: QuestionResolverService
     }

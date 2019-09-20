@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ViewComponent } from './view/view.component';
+import { QuestionViewComponent } from './view/view.component';
 import { QuestionRoutingModule } from './question-routing.module';
 
 
 
 @NgModule({
-  declarations: [ViewComponent],
+  declarations: [QuestionViewComponent],
   imports: [
     CommonModule,
     QuestionRoutingModule
