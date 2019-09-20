@@ -18,12 +18,6 @@ export class TopStoryViewComponent implements OnInit {
       this.topStories = data.stories;
     });
     console.log('Hello');
-    this.service.getTopStory('sport').subscribe(
-      res => {
-        this.topStories = res;
-        console.log(res);
-      }
-    )
   }
 
 }

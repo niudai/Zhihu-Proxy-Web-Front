@@ -18,11 +18,11 @@ export class TopStoryResolverService implements Resolve<any> {
         if (stories) {
           return of(stories);
         } else {
-          this.router.navigate(['']);
+          // this.router.navigate(['']);
           return EMPTY;
         }
       })
-    )
+    );
   }
 }
 
@@ -37,7 +37,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), TopStoryResolverService],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class TopStoryRoutingModule { }
