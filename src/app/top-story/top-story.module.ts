@@ -4,6 +4,7 @@ import { TopStoryViewComponent } from './view/view.component';
 import { TopStoryRoutingModule } from './top-story-routing.module';
 import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     TopStoryRoutingModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ]
 })
 export class TopStoryModule { }

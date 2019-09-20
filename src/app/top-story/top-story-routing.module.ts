@@ -2,7 +2,7 @@ import { NgModule, Injectable } from '@angular/core';
 import { Routes, RouterModule, Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { TopStoryViewComponent } from './view/view.component';
 import { TopStoryService } from './top-story.service';
-import { Observable, of, EMPTY } from 'rxjs';
+import { Observable, of, EMPTY, interval } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root'})
