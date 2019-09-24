@@ -13,7 +13,7 @@ export class TopStoryResolverService implements Resolve<any> {
     const storyType = route.paramMap.get('storyType');
 
     return this.service.getTopStory(storyType).pipe(
-      take(1),
+      // take(1),
       mergeMap(stories => {
         if (stories) {
           return of(stories);

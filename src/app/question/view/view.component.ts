@@ -17,7 +17,7 @@ export class QuestionViewComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data: { answers: any}) => {
-      this.answers = data.answers;
+      this.answers = data.answers.data;
     });
   }
 
