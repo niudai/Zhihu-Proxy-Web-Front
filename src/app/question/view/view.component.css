@@ -1,3 +1,25 @@
 img {
-  width: 90%;
+  width: 100%;
+}
+
+img.Avatar.AuthorInfo-avatar {
+  width: 40px;
+  height: 40px;
+  /* top: 5px; */
+  margin-right: 5px;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+a.UserLink-link {
+  text-decoration: none;
+}
+
+.AuthorInfo-head {
+  margin-top: 18px;
+  font-weight: 800;
+}
+
+mat-card-title.question-title.mat-card-title {
+  font-weight: 600;
 }

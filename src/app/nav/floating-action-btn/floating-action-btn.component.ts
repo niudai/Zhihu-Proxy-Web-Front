@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
 
 @Component({
   selector: 'app-floating-action-btn',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./floating-action-btn.component.css']
 })
 export class FloatingActionBtnComponent implements OnInit {
+
+  faHeart = faHeart;
 
   constructor() { }
 

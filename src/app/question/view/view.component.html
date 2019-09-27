@@ -1,6 +1,44 @@
-<div *ngFor="let answer of answers">
-    <div [innerHTML]="answer.content" >
-    </div>
-    <mat-divider></mat-divider>    
-</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title class = "question-title">{{answers[0].question.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
 
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-accordion *ngFor="let answer of answers" #matPanels>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <a>
+          <img
+            class="Avatar AuthorInfo-avatar"
+            width="38"
+            height="38"
+            [src]="answer.author.avatar_url"
+            alt="不知江月"
+          />
+        </a>
+        <div class="AuthorInfo-content">
+          <div class="AuthorInfo-head">
+            <span class="UserLink AuthorInfo-name">
+              <a
+                class="UserLink-link"
+                data-za-detail-view-element_name="User"
+                target="_blank"
+                [href]="answer.author.url"
+                >{{ answer.author.name }}</a
+              >
+              {{ answer.author.headline }}
+            </span>
+          </div>
+        </div>
+      </mat-panel-title>
+      <mat-panel-description> </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div [innerHTML]="answer.content"></div>
+  </mat-expansion-panel>
+</mat-accordion>
